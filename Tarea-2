@@ -21,7 +21,7 @@ ej2<-function(a,b){
     }
   }  
 }
-3------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # funcion que resuelve una ec.cuadrática
 ej3<- function(a,b,c){
   if( ((class(a)=="numeric")|(class(a)=="integer"))&((class(b)=="numeric")|(class(b)=="integer"))&((class(c)=="numeric")|(class(c)=="integer"))){
