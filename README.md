@@ -1,6 +1,6 @@
 # Tarea-2
 
-El proyecto onsiste en resolver los siguientes ejercicios
+El proyecto consiste en resolver los siguientes ejercicios
 Ejercicio 1;
 ===========
  Crear una función que lea una secuencia de datos, y un número o carácter. La funcion devuelve la secuencia, pero cambiando los datos que son iguales al caracter entregado con el simbolo NA.
