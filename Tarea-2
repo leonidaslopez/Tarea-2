@@ -1,0 +1,87 @@
+#Crear una función que lea una secuencia de datos, y un número o carácter.
+#La funcion devuelve la secuencia, pero cambiando los datos que son iguales 
+#al caracter entregado
+#con el simbolo NA
+ej1<-function(a,b){
+  for (i in 1:length(a)) {
+    if (a[i]==b){
+      a[i]<-NA
+    }
+  }
+  print(a)
+}
+#----------------------------------------------------------------------------
+#Crear una función que devolverá true si un entero dado está dentro de un vector.
+ej2<-function(a,b){
+  y<-0
+  for (i in a) {
+    if (i==b){
+      return(TRUE)
+      print("TRUE")
+    }
+  }  
+}
+3------------------------------------------------------------------------------
+# funcion que resuelve una ec.cuadrática
+ej3<- function(a,b,c){
+  if( ((class(a)=="numeric")|(class(a)=="integer"))&((class(b)=="numeric")|(class(b)=="integer"))&((class(c)=="numeric")|(class(c)=="integer"))){
+  delta<-b^2-4*a*c#construccion de delta
+  if(delta > 0){ #caso en el que hay dos soluciones
+    x_1 = (-b+sqrt(delta))/(2*a)
+    x_2 = (-b-sqrt(delta))/(2*a)
+    result = c(x_1,x_2)
+    print(x_1)
+    print(x_2)
+  }
+  else if(delta == 0){ # caso en el que hay una solucion
+    x = -b/(2*a)
+    print(x)
+  }
+  else {print("no existe solucion real") # caso en el que hay una solucion
+    }
+  }
+  else {print("datos ingresados no son validos")
+  }
+  }
+#------------------------------------------------------------------------------
+#Crear una función que dado un vector y un entero devolverá cuántas veces aparece
+#el número entero dentro del vector.
+ej4<-function(a,b){
+  y<-0
+  for (i in a) {
+    if (i==b){
+      y<-y+1
+    }
+  }  
+  print(y)
+}
+#----------------------------------------------------------------------------
+#Crear una función que dado un vector se imprima por pantalla  la media 
+#y la desviación estándar.
+ej5<-function(a){
+  x<-0
+  for (i in a) {
+    x<-x+a[i]
+  }
+  media<-x/length(a)
+  print(media)
+  y<-0
+  for (i in a) {
+    y<-y+(a[i]-media)^2
+  }
+  ds=sqrt(y/length(a))
+  print(ds)
+}
+#--------------------------------------------------------------------
+#Crear una función que dado un número entero va a calcular el 
+#número de divisores que tiene (que no sea 1 y sí mismo).
+ej6<-function(x){
+  y<-0
+  for (i in 1:x) {
+    if (x%%i==0){
+      y<-y+1
+    }
+  }  
+  y<-y-2
+  print(y)
+}
